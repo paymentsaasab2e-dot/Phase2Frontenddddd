@@ -1,0 +1,14 @@
+
+> phase2final@0.1.0 dev
+> next dev -p 3001
+
+   ▲ Next.js 15.5.12
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.29.180:3001
+
+ ✓ Starting...
+ ✓ Ready in 2.3s
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 14.3s (2528 modules)
+ GET /dashboard 200 in 15690ms
+ ✓ Compiled in 2.1s (1187 modules)

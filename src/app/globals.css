@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --recruitment-surface: #ffffff;
+  --recruitment-surface-soft: #f8fafc;
+  --recruitment-border: #e2e8f0;
+  --recruitment-border-strong: #cbd5e1;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+}
+
+@layer components {
+  .recruitment-page {
+    @apply min-h-screen w-full bg-slate-50 text-slate-900;
+  }
+
+  .recruitment-page-shell {
+    @apply mx-auto flex w-full max-w-[1440px] flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8;
+  }
+
+  .recruitment-page-header {
+    @apply flex flex-col gap-4 rounded-[1.75rem] border border-slate-200 bg-white px-5 py-5 shadow-sm sm:flex-row sm:items-start sm:justify-between sm:px-6;
+  }
+
+  .recruitment-eyebrow {
+    @apply text-[11px] font-black uppercase tracking-[0.2em] text-slate-400;
+  }
+
+  .recruitment-header-title {
+    @apply text-2xl font-bold tracking-[-0.015em] text-slate-900 sm:text-[1.75rem];
+  }
+
+  .recruitment-header-description {
+    @apply max-w-3xl text-sm font-medium leading-6 text-slate-500;
+  }
+
+  .recruitment-actions {
+    @apply flex flex-wrap items-center gap-2 self-start sm:justify-end;
+  }
+
+  .recruitment-primary-button {
+    @apply inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 text-sm font-bold text-white shadow-sm shadow-blue-200/70 transition-colors hover:bg-blue-700 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .recruitment-secondary-button {
+    @apply inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-700 shadow-sm transition-colors hover:bg-slate-50 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .recruitment-icon-button {
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition-colors hover:bg-slate-50 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .recruitment-count-pill {
+    @apply inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-100/90 px-2.5 py-1 text-xs font-bold text-slate-600;
+  }
+
+  .recruitment-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-600;
+  }
+
+  .recruitment-muted-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-500;
+  }
+
+  .recruitment-surface {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+  }
+
+  .recruitment-toolbar {
+    @apply flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm lg:flex-row lg:items-center lg:justify-between;
+  }
+
+  .recruitment-search-shell {
+    @apply relative;
+  }
+
+  .recruitment-search-input {
+    @apply h-11 w-full rounded-xl border border-slate-200 bg-slate-50/70 pl-11 pr-4 text-sm text-slate-700 shadow-sm outline-none transition-all placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10;
+  }
+
+  .recruitment-segmented {
+    @apply inline-flex items-center gap-1 rounded-2xl border border-slate-200 bg-slate-100/80 p-1 shadow-sm;
+  }
+
+  .recruitment-segmented-button {
+    @apply inline-flex h-10 items-center justify-center gap-2 rounded-xl px-3 text-sm font-semibold text-slate-500 transition-colors hover:text-slate-700;
+  }
+
+  .recruitment-segmented-button-active {
+    @apply bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/80;
+  }
+
+  .recruitment-kpi-card {
+    @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:border-slate-300 hover:shadow-md;
+  }
+
+  .recruitment-kpi-icon {
+    @apply flex h-11 w-11 items-center justify-center rounded-2xl;
+  }
+
+  .recruitment-kpi-trend {
+    @apply inline-flex items-center gap-1 rounded-full px-2 py-1 text-[11px] font-bold;
+  }
+
+  .recruitment-kpi-label {
+    @apply text-[11px] font-black uppercase tracking-[0.16em] text-slate-400;
+  }
+
+  .recruitment-kpi-value {
+    @apply mt-1 text-[1.5rem] font-semibold tracking-[-0.01em] text-slate-900;
+  }
+
+  .recruitment-tabs-bar {
+    @apply flex items-center gap-2 overflow-x-auto no-scrollbar;
+  }
+
+  .recruitment-tab {
+    @apply relative inline-flex items-center gap-2 rounded-xl border border-transparent px-4 py-2.5 text-sm font-semibold text-slate-500 transition-colors hover:bg-slate-50 hover:text-slate-700;
+  }
+
+  .recruitment-tab-active {
+    @apply border-slate-200 bg-slate-50 text-blue-700 shadow-sm;
+  }
+
+  .recruitment-tab-count {
+    @apply inline-flex min-w-[1.6rem] items-center justify-center rounded-full bg-slate-200/80 px-1.5 py-0.5 text-[10px] font-black text-slate-500;
+  }
+
+  .recruitment-tab-count-active {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  .recruitment-table-shell {
+    @apply overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm;
+  }
+
+  .recruitment-table-head-row {
+    @apply border-y border-slate-200 bg-slate-50;
+  }
+
+  .recruitment-table-head-cell {
+    @apply px-4 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-slate-500;
+  }
+
+  .recruitment-empty-state {
+    @apply flex min-h-[300px] flex-col items-center justify-center gap-6 rounded-2xl border border-dashed border-slate-300 bg-white px-6 py-12 text-center shadow-sm;
+  }
+
+  .recruitment-empty-state-icon {
+    @apply flex h-20 w-20 items-center justify-center rounded-full bg-blue-50 text-blue-500;
+  }
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* No scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Animation utilities */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: fade-in 0.5s ease-in-out;
+}

@@ -1,0 +1,18 @@
+
+> phase2final@0.1.0 predev C:\Users\vedan\OneDrive\Desktop\SAASAPHASE2\frontphase2
+> node scripts/clear-next-cache.cjs
+
+[frontend] Cleared stale .next cache
+
+> phase2final@0.1.0 dev C:\Users\vedan\OneDrive\Desktop\SAASAPHASE2\frontphase2
+> next dev -p 3001
+
+   ▲ Next.js 15.5.12
+   - Local:        http://localhost:3001
+   - Network:      http://10.244.223.102:3001
+
+ ✓ Starting...
+ ✓ Ready in 2.7s
+ ○ Compiling / ...
+ ✓ Compiled / in 8.2s (1323 modules)
+ ✓ Compiled in 1183ms (607 modules)
